@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="corner-image">
+        <img src="/assets/images/tecsup.png" alt="Logo">
+    </div>
+    <div class="wrapper">
+        <form>
+            <h1>Registrarse en InfoPilot</h1>
+            <div class="input-box">
+                <input type="text" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Nombre">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Apellido">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Correo Electronico">
+                <i class='bx bx-mail-send'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" placeholder="Contraseña">
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="btn" (click)="save()">Registrarse</button>
+            <div class="register-link">
+                <p>¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
