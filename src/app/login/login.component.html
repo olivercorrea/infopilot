@@ -12,15 +12,23 @@
         <img src="/assets/images/tecsup.png" alt="Logo">
     </div>
     <div class="wrapper">
-        <form action="">
+        <form (ngSubmit)="login()" #loginForm="ngForm">
             <h1>Bienvenido a InfoPilot!</h1>
             <div class="input-box">
-                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Correo Electronico">
+                <input type="email" [(ngModel)]="email" name="email" class="form-control" id="course" placeholder="Correo Electronico" required email>
                 <i class='bx bxs-user'></i>
+                <div *ngIf="loginForm.submitted && loginForm.controls['email']?.invalid" class="error-message">
+                    <small *ngIf="loginForm.controls['email']?.errors?.['required']">El correo electrónico es obligatorio.</small>
+                    <small *ngIf="loginForm.controls['email']?.errors?.['email']">Formato de correo electrónico no válido.</small>
+                </div>
             </div>
             <div class="input-box">
-                <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" placeholder="Contraseña">
-                <i class='bx bxs-lock-alt'></i>
+                <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" name="password" class="form-control" id="fee" placeholder="Contraseña" required minlength="6">
+                <i class='bx' [class.bxs-lock-alt]="!showPassword" [class.bxs-lock-open-alt]="showPassword" (click)="togglePasswordVisibility()"></i>
+                <div *ngIf="loginForm.submitted && loginForm.controls['password']?.invalid" class="error-message">
+                    <small *ngIf="loginForm.controls['password']?.errors?.['required']">La contraseña es obligatoria.</small>
+                    <small *ngIf="loginForm.controls['password']?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</small>
+                </div>
             </div>
 
             <div class="remember-forgot">
@@ -28,13 +36,12 @@
                 <a href="#">Olvido la contraseña?</a>
             </div>
 
-            <button type="submit" class="btn" (click)="login()">Ingresar</button>
+            <button type="submit" class="btn">Ingresar</button>
 
-            <button type="submit" class="google-btn" (click)="googlelogin()">
+            <button type="button" class="google-btn" (click)="googlelogin()">
                 <i class='bx bxl-google'></i>
                 <span>Ingresar con Google</span>
             </button>
-
 
             <div class="register-link">
                 <p>No tienes una cuenta? <a routerLink="register">Registrate</a></p>
@@ -43,3 +50,4 @@
     </div>
 </body>
 </html>
+
