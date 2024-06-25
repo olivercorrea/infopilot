@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthGoogleService } from '../auth-google.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent {
   password: string = '';
   isLogin: boolean = true;
   erroMessage: string = "";
-  constructor(private router: Router,private http: HttpClient) {}
+  constructor(private router: Router,private http: HttpClient, private authGoogleService: AuthGoogleService) {}
   login() {
     console.log(this.email);
     console.log(this.password);
@@ -24,9 +25,10 @@ export class LoginComponent {
         console.log(resultData);
         if (resultData.status) 
         {
-      
-           this.router.navigateByUrl('/home');
-    
+          if (resultData.token) {
+            localStorage.setItem('token', resultData.token);
+            this.router.navigateByUrl('/home');
+          }
         } 
         else
          {
@@ -35,4 +37,8 @@ export class LoginComponent {
         }
       });
     }
+  
+  googlelogin() {
+    this.authGoogleService.login();
+  }
 }
