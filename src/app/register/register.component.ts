@@ -1,40 +1,48 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
-  firstname: string ="";
-  lastname: string ="";
-  email: string ="";
-  password: string ="";
+export class RegisterComponent implements OnInit {
+  registerForm: FormGroup;
+  showPassword: boolean = false;
+  submitted: boolean = false;
 
-  constructor(private http: HttpClient) 
-  {
+  constructor(private http: HttpClient, private fb: FormBuilder) {
+    this.registerForm = this.fb.group({
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
   }
-  ngOnInit(): void
-  {
-  }
-  register()
-  {
-    let bodyData = 
-    {
-      "firstname" : this.firstname,
-      "lastname" : this.lastname,
-      "email" : this.email,
-      "password" : this.password,
+  ngOnInit(): void{}
+  register() {
+    if (this.registerForm.invalid) {
+      return;
+    }
+    let bodyData = {
+      "firstname": this.registerForm.value.firstname,
+      "lastname": this.registerForm.value.lastname,
+      "email": this.registerForm.value.email,
+      "password": this.registerForm.value.password,
     };
-    this.http.post("http://localhost:9992/user/create",bodyData).subscribe((resultData: any)=>
-    {
+    this.http.post("http://localhost:9992/user/create",bodyData).subscribe((resultData: any)=>{
         console.log(resultData);
         alert("User Registered Successfully")
     });
   }
-  save()
-  {
-    this.register();
+  save() {
+    this.submitted = true;
+    if (this.registerForm.valid) {
+      this.register();
+    }
+  }
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
 }

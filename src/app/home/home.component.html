@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <style>
         *{
             margin: 0;
@@ -41,6 +41,18 @@
     <link rel="stylesheet" href="home.component.css">
 </head>
 <body>
+    <header class="header">
+        <a href="#" class="logo">InfoPilot</a>
+
+        <nav class="navbar">
+            <a routerLink="/home">Home</a>
+            <a routerLink="/chancado">Chancado</a>
+            <a routerLink="/molienda">Molienda</a>
+            <a routerLink="/flotacion">Flotacion</a>
+            <a routerLink="/espesamiento">Espesamiento</a>
+            <a (click)="logOut()">LogOut</a>
+        </nav>
+    </header>
     <div class="banner">
         <div class="slider" style="--quantity: 10">
             <div class="item" style="--position: 1"><img src="/assets/images/chancado1.png" alt=""></div>

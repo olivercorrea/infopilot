@@ -12,27 +12,41 @@
         <img src="/assets/images/tecsup.png" alt="Logo">
     </div>
     <div class="wrapper">
-        <form>
+        <form [formGroup]="registerForm" (ngSubmit)="save()">
             <h1>Registrarse en InfoPilot</h1>
             <div class="input-box">
-                <input type="text" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Nombre">
+                <input type="text" formControlName="firstname" class="form-control" id="stname" placeholder="Nombre">
                 <i class='bx bxs-user'></i>
+                <div *ngIf="submitted && registerForm.get('firstname')?.invalid" class="error-message">
+                    <small *ngIf="registerForm.get('firstname')?.errors?.['required']">El nombre es obligatorio.</small>
+                </div>
             </div>
             <div class="input-box">
-                <input type="text" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Apellido">
+                <input type="text" formControlName="lastname" class="form-control" id="stname" placeholder="Apellido">
                 <i class='bx bxs-user'></i>
+                <div *ngIf="submitted && registerForm.get('lastname')?.invalid" class="error-message">
+                    <small *ngIf="registerForm.get('lastname')?.errors?.['required']">El apellido es obligatorio.</small>
+                </div>
             </div>
             <div class="input-box">
-                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Correo Electronico">
+                <input type="email" formControlName="email" class="form-control" id="course" placeholder="Correo Electronico">
                 <i class='bx bx-mail-send'></i>
+                <div *ngIf="submitted && registerForm.get('email')?.invalid" class="error-message">
+                    <small *ngIf="registerForm.get('email')?.errors?.['required']">El correo electrónico es obligatorio.</small>
+                    <small *ngIf="registerForm.get('email')?.errors?.['email']">Formato de correo electrónico no válido.</small>
+                </div>
             </div>
             <div class="input-box">
-                <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" placeholder="Contraseña">
-                <i class='bx bxs-lock-alt'></i>
+                <input [type]="showPassword ? 'text' : 'password'" formControlName="password" class="form-control" id="fee" placeholder="Contraseña">
+                <i class='bx' [class.bxs-lock-alt]="!showPassword" [class.bxs-lock-open-alt]="showPassword" (click)="togglePasswordVisibility()"></i>
+                <div *ngIf="submitted && registerForm.get('password')?.invalid" class="error-message">
+                    <small *ngIf="registerForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</small>
+                    <small *ngIf="registerForm.get('password')?.errors?.['minlength']">La contraseña debe tener al menos 6 caracteres.</small>
+                </div>
             </div>
-            <button type="submit" class="btn" (click)="save()">Registrarse</button>
+            <button type="submit" class="btn">Registrarse</button>
             <div class="register-link">
-                <p>¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></p>
+                <p>¿Ya tienes una cuenta? <a routerLink="/login">Inicia sesión</a></p>
             </div>
         </form>
     </div>
