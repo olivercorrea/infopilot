@@ -23,7 +23,7 @@ import { MatInputModule } from '@angular/material/input';
     MainComponent,
     RegisterComponent,
     HomeComponent,
-    ChatComponent
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +33,9 @@ import { MatInputModule } from '@angular/material/input';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

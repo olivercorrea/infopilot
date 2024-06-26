@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { io, Socket } from 'socket.io-client';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ChatService {
   private socket: Socket;

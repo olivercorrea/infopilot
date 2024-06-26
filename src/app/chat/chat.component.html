@@ -2,20 +2,29 @@
 
 <div class="chat-container" [ngClass]="{ open: chatOpen }">
   <div class="chat-header">
-    <h2>Chat</h2>
-    <button (click)="toggleChat()">x</button>
+    <i class="bx bxs-user"></i>
+    <h2>InfoPilotAI</h2>
+    <button class="chat-close-button" (click)="toggleChat()">x</button>
   </div>
   <div class="chat-body" id="chat-box">
     <div
       *ngFor="let message of messages"
       class="chat-message"
-      [ngClass]="{ message: true, user: message.role === 'user', bot: message.role === 'bot' }"
+      [ngClass]="{
+        message: true,
+        user: message.role === 'user',
+        bot: message.role === 'bot'
+      }"
     >
       <strong>{{ message.role }}:</strong> {{ message.content }}
     </div>
   </div>
   <div class="chat-footer">
-    <input type="text" [(ngModel)]="userMessage" placeholder="Escribe un mensaje" />
+    <input
+      type="text"
+      [(ngModel)]="userMessage"
+      placeholder="Escribe un mensaje"
+    />
     <button (click)="sendMessage()">Enviar</button>
   </div>
 </div>
