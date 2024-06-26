@@ -11,10 +11,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+<<<<<<< HEAD
 import { ChancadoComponent } from './chancado/chancado.component';
 import { MoliendaComponent } from './molienda/molienda.component';
 import { FlotacionComponent } from './flotacion/flotacion.component';
 import { EspesamientoComponent } from './espesamiento/espesamiento.component';
+=======
+import { ChatComponent } from './chat/chat.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+>>>>>>> 589ca62ee430dc6cdc6c676a25c3cbc801c63013
 
 @NgModule({
   declarations: [
@@ -23,10 +31,14 @@ import { EspesamientoComponent } from './espesamiento/espesamiento.component';
     MainComponent,
     RegisterComponent,
     HomeComponent,
+<<<<<<< HEAD
     ChancadoComponent,
     MoliendaComponent,
     FlotacionComponent,
     EspesamientoComponent
+=======
+    ChatComponent,
+>>>>>>> 589ca62ee430dc6cdc6c676a25c3cbc801c63013
   ],
   imports: [
     BrowserModule,
@@ -34,9 +46,12 @@ import { EspesamientoComponent } from './espesamiento/espesamiento.component';
     AppRoutingModule,
     OAuthModule.forRoot(),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
