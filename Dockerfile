@@ -1,13 +1,13 @@
 # Etapa de construcción
-FROM node:14 as build
+FROM node:latest as build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build -- --prod
+RUN npm run build -- --configuration production
 
 # Etapa de producción
 FROM nginx:alpine
-COPY --from=build /app/dist/your-angular-app /usr/share/nginx/html
+COPY --from=build /app/dist/infopilot /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
