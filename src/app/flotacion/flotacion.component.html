@@ -1,1 +1,82 @@
-<p>flotacion works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Flotación</title>
+    <link rel="stylesheet" href="flotacion.component.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">InfoPilot</a>
+        <nav class="navbar">
+            <a routerLink="/home">Home</a>
+            <a routerLink="/chancado">Chancado</a>
+            <a routerLink="/molienda">Molienda</a>
+            <a routerLink="/flotacion">Flotación</a>
+            <a routerLink="/espesamiento">Espesamiento</a>
+            <a (click)="logOut()">LogOut</a>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <div class="row team_box">
+                    <h3 class="m_2">Área Flotación</h3>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/CeldRou1.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Celdas Rougher</a></h4>
+                        <p class="m_6">Equipos de Área de Flotación</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/CeldSca2.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Celdas Scavanger</a></h4>
+                        <p class="m_6">Equipos de Área de Flotación</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/CeldClea3.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Celdas Cleaner</a></h4>
+                        <p class="m_6">Equipos de Área de Flotación</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/TanqAcond4.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Tanques de Acond.</a></h4>
+                        <p class="m_6">Equipos de Área de Flotación</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 team_bottom">
+                        <ul class="team_list">
+                            <h4>Reactivos</h4>
+                            <li><a >Espumante:</a>
+                                <p>Tienen como propósito la creación de una espuma capaz de mantener las burbujas cargadas de mineral hasta su extracción de la máquina de flotación (celdas).</p>
+                            </li>
+                            <li><a >Colector:</a>
+                                <p>Es el reactivo fundamental del proceso de flotación puesto que produce la película hidrofóbica sobre la partícula del mineral.</p>
+                            </li>
+                            <li><a >Modificador:</a>
+                                <p>Actúan como depresores, activadores, reguladores de ph, dispersores, etc. facilitando la acción del colector para flotar el mineral de valor, evitando su acción a todos los otros minerales como es la ganga.</p>
+                            </li>
+                            <li><a >Importancia:</a>
+                                <p>Los reactivos de flotación juegan un papel importante en este proceso. estos al ser añadidos al sistema cumplen determinadas funciones que hacen posible la separación de los minerales valiosos de la ganga. Sin embargo, la aplicación adecuada de estos reactivos no siempre resulta una tarea fácil debido a una serie de dificultades técnicas que se presentan durante el proceso.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="team_list">
+                            <h4>Introducción</h4>
+                            <p class="m_7">La flotación por espumas es un proceso físico - químico de la concentración de minerales finamente molidos. el proceso comprende el tratamiento químico de una pulpa de mineral a fin de crear condiciones favorables para la adhesión de ciertas partículas de minerales a las burbujas de aire. tiene por objeto la separación de especies minerales, divididos a partir de una pulpa acuosa, aprovechando sus propiedades de afinidad (hidrofílico) o repulsión (hidrofóbico) por el agua. las especies valiosas o útiles constituyen una fracción menor del mineral, mientras que las especies no valiosas o estériles constituyen la mayor parte el carácter hidrofílico o de afinidad hace que estas partículas se mojen, permanezcan en suspensión en la pulpa, para finalmente hundirse. el carácter hidrofóbico o de repulsión evita el mojado de las partículas minerales que pueden adherirse a las burbujas y ascender estas propiedades de algunos minerales tienen en forma natural, pero pueden darse o asentarse mediante los reactivos de flotación.</p>
+                            <h4>Proceso</h4>
+                            <p class="m_7">Los minerales hidrofílicos e hidrofóbicos de una pulpa acuosa se pueden separar entre sí, después de ser finamente molidos y acondicionado con los reactivos químicos que hacen más pronunciadas las propiedades hidrofílicas e hidrofóbicas, haciendo pasar burbujas de aire a través de la pulpa. las partículas hidrofílicas se van a mojar y caer al fondo de la celda de flotación. de esta forma se puede separar un mineral que contiene en los casos más simples dos componentes, un útil y otra estéril, en dos productos: un concentrado de la parte valiosa y un relave que contiene la parte estéril.</p>
+                            <h4>Flowsheet del Área de Flotación</h4>
+                            <img src="/assets/images/FlowFlot.jpg" class="img-responsive" alt=""/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-chat></app-chat>
+    </div>
+</body>
+</html>
+

@@ -1,1 +1,95 @@
-<p>molienda works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molienda</title>
+    <link rel="stylesheet" href="molienda.component.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">InfoPilot</a>
+        <nav class="navbar">
+            <a routerLink="/home">Home</a>
+            <a routerLink="/chancado">Chancado</a>
+            <a routerLink="/molienda">Molienda</a>
+            <a routerLink="/flotacion">Flotacion</a>
+            <a routerLink="/espesamiento">Espesamiento</a>
+            <a (click)="logOut()">LogOut</a>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <div class="row team_box">
+                    <h3 class="m_2">Área Molienda</h3>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/MoBolas1.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <div id="small-dialog3" class="mfp-hide">
+                            <div class="pop_up2">
+                                <h4 class="m_5"><a >Molino de Bolas</a></h4>
+                            </div>
+                        </div>
+                        <p class="m_6">Equipo de Área de Molienda</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/Bomba2.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <div id="small-dialog3" class="mfp-hide">
+                            <div class="pop_up2">
+                                <h4 class="m_5"><a >Bomba Centrífuga</a></h4>
+                            </div>
+                        </div>
+                        <p class="m_6">Equipo de Área de Molienda</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/Hidrociclon3.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <div id="small-dialog3" class="mfp-hide">
+                            <div class="pop_up2">
+                                <h4 class="m_5"><a >Hidrociclón</a></h4>
+                            </div>
+                        </div>
+                        <p class="m_6">Equipo de Área de Molienda</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/TolvaFi4.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <div id="small-dialog3" class="mfp-hide">
+                            <div class="pop_up2">
+                                <h4 class="m_5"><a >Tolva de Finos</a></h4>
+                            </div>
+                        </div>
+                        <p class="m_6">Equipo de Área de Molienda</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 team_bottom">
+                        <ul class="team_list">
+                            <h4>Variables</h4>
+                            <li><a >Carga de Mineral:</a><p>La cantidad de carga que se alimenta al molino debe ser controlada, procurando que la carga sea lo máximo posible. si se alimenta poca carga se pierde capacidad de molienda y se gasta inútilmente bolas y chaquetas. si se alimenta demasiada carga se sobrecarga el molino y al descargarlo se pierde tiempo y capacidad de molienda. Si la densidad de la descarga del molino es elevada se debe a un exceso de carga o poca agua. si la densidad está por debajo de lo normal, se debe a la deficiencia de carga o exceso de agua.</p></li>
+                            <li><a >Suministro de Agua:</a><p>La dosificación de agua a los molinos se controla mediante la densidad de pulpa en la descarga del mismo. Cuando el mineral y el agua ingresan al molino, en su interior, forman un barro liviano que tiene tendencia de pegarse a las bolas, por otro lado, el agua ayuda a avanzar a la carga en el interior del molino.Cuando la cantidad de agua suministrada es excesiva, lava la superficie de las bolas haciendo que estas se golpeen entre sí y no muelen al mineral, ya que la molienda se produce cuando el barro adherido a su superficie es atrapado entre las bolas el exceso de agua disminuye el tiempo de permanencia del mineral en el interior del molino, haciendo que la carga salga rápidamente y con granulometría gruesa. Cuando la cantidad de agua es deficiente, la carga avanza lentamente y el barro se vuelve muy espeso, amortigua el golpe entre las bolas y no produce buena molienda.</p></li>
+                            <li><a >Carga de Bolas:</a><p>Es necesario que el molino siempre tenga su carga normal de medios moledores. el consumo de bolas se debe a la dureza del mineral, tamaño de mineral alimentado y la finura que se desea obtener en la molienda. Cuando el molino tiene exceso de bolas se disminuye la capacidad del molino, ya que estas ocupan el espacio para la carga. Cuando la carga de bolas está por debajo de lo normal, se pierde capacidad moledora porque habrá dificultad para llevar el mineral a la granulometría deseada.</p></li>
+                            <li><a >Tiempo de Molienda:</a><p>La permanencia del mineral dentro del molino determina el grado de finura de las partículas liberadas. el grado de finura está en relación directa con el tiempo de permanencia en el interior del molino, pero el tonelaje de mineral tratado disminuirá si es demasiado prolongado. el tiempo de permanencia se regula por medio de la cantidad de agua añadida al molino.</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="team_list">
+                            <h4>Introducción</h4>
+                            <p class="m_7">La liberación de un mineral se inicia con el chancado y termina con la molienda; esta es muy importante porque de él depende el tonelaje y la liberación del mineral valioso que después debe concentrarse. en esta etapa debe liberarse completamente las partes valiosas del mineral (sulfuros y/o óxidos) de la ganga, antes de proceder a la concentración la operación de molienda normalmente se efectúa en etapa primaria en los molinos de barras y secundaria en los de bolas. esta operación se logra con alta eficiencia cuando los molinos son operados en condiciones normales en cuanto a uniformidad del tamaño de alimentación, dilución, velocidad crítica de operación, nivel de bolas y de potencia de motor aceptables. cuanto más fino se muele el mineral, mayor es el costo de molienda y hasta cierto grado, una molienda más fina conlleva a una mejora en la recuperación de valores. de acuerdo a esto la molienda óptima es aquella malla de molienda en el cual los beneficios son máximos, cuando se considera tanto el costo de energía.</p>
+                            <h4>Procedimiento de Operación</h4>
+                            <p class="m_7">Para arrancar la etapa de molienda se necesita habilitar algunas llaves y líneas de agua ya que este proceso tiende a trabajar con agua, esto para su acondicionamiento y leugo recién recibir la carga del mineral.</p>
+                            <p class="m_7">1. Abrir la válvula 1 m para alimentar agua por la línea 2 lm que trae agua de 1lm.</p>
+                            <p class="m_7">2. La línea 1 lm conduce agua a las líneas 5 lm y 4ml mediante la línea 3lm.</p>
+                            <p class="m_7">3. La línea 5 lm alimenta agua mediante la válvula 3m que tiene que estar abierta ¾ para alimentar al trommel.</p>
+                            <p class="m_7">4. La línea 4 lm conduce agua al cajón distribuidor para lo cual se tiene que abrir ¾ de la válvula 2m.</p>
+                            <p class="m_7">5. Luego de tener alimentación en el cajón distribuidor de agua pasar a abrir la válvula 4 m hasta las ¾ para alimentar de agua la línea 6 lm que alimentara la bomba centrifuga que cumple la función de bombear agua por la línea 7 lm hacia el hidrociclón.</p>
+                            <h4>Flowsheet del Área de Molienda</h4>
+                            <img src="/assets/images/FlowMolino.png" class="img-responsive" alt=""/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-chat></app-chat>
+    </div>
+</body>
+</html>
+

@@ -1,1 +1,79 @@
-<p>espesamiento works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Espesamiento</title>
+    <link rel="stylesheet" href="espesamiento.component.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">InfoPilot</a>
+        <nav class="navbar">
+            <a routerLink="/home">Home</a>
+            <a routerLink="/chancado">Chancado</a>
+            <a routerLink="/molienda">Molienda</a>
+            <a routerLink="/flotacion">Flotación</a>
+            <a routerLink="/espesamiento">Espesamiento</a>
+            <a (click)="logOut()">LogOut</a>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <div class="row team_box">
+                    <h3 class="m_2">Área Espesamiento</h3>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/TanqAcon1.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Tanque de Espesamiento</a></h4>
+                        <p class="m_6">Equipos de Área de Espesamiento</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/TanqAgua2.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Tanque de Agua Recuperada</a></h4>
+                        <p class="m_6">Equipos de Área de Espesamiento</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/TanqConc3.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Tanque de Concentrado</a></h4>
+                        <p class="m_6">Equipos de Área de Espesamiento</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/BombVac4.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Bomba de Vacío</a></h4>
+                        <p class="m_6">Equipos de Área de Espesamiento</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 team_bottom">
+                        <ul class="team_list">
+                            <h4>Variables</h4>
+                            <li><a >Densidad:</a>
+                                <p>Que el producto espesado tenga la densidad fijada para enviar al filtro. Si la densidad es muy baja la filtración se realizará en forma deficiente y el espesador podría sobrecargarse.</p>
+                            </li>
+                            <li><a >Agitación:</a>
+                                <p>Que no debe haber agitación violenta dentro del espesador; si hubiera se levanta parte del material que ya estaba sedimentado, hasta llegar a la superficie rebosando agua sucia conteniendo concentrados valiosos. La agitación violenta se produce debido al uso del aire dentro del tanque, por el cono, cuando este se obstruye. Y también por falta de cedazo en el recibidor de carga, para amortiguar la caída de la espuma alimentada.</p>
+                            </li>
+                            <li><a >Capacidad:</a>
+                                <p>Para hallar la capacidad se hizo pruebas con probetas de 1 lt en lo que se llenó al tanque de concentrados y se pudo determinar que la cap. es de 11 lt se recomienda 10 lt para que no rebalse y se pueda perder mineral valioso. Actúan como depresores, activadores, reguladores de ph, dispersores, etc.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="team_list">
+                            <h4>Introducción</h4>
+                            <p class="m_7">En esta área se realiza el acto de asentamiento de partículas sólidas en un medio fluido, bajo la fuerza de la gravedad, centrífuga, magnética o eléctrica. Es la operación consistente en separar de una suspensión un fluido claro que sobrenada y un lodo bastante denso que contenga una elevada concentración de materias sólidas. En la industria, la sedimentación de las suspensiones acuosas es un proceso continuo que se realiza en los espesadores, que son grandes depósitos cilíndricos, recipientes de cono invertido equipados con rastrillos de movimiento lento para el arrastre de los lodos espesados hacia un orificio central de descarga. El producto de la flotación llega por un canal de alimentación a un recipiente alimentador situado en la parte superior central del tanque. La suspensión precipitada forma un lodo espeso que se descarga por el fondo. El fluido claro fluye hacia los bordes del depósito, es descargado por el rebose sobre el borde periférico.</p>
+                            <h4>Proceso</h4>
+                            <p class="m_7">Esta área se basa en los espesadores, los cuales son tanques o aparatos que sirven para espesar los concentrados y relaves de la flotación, por el procedimiento de quitarles parte del agua que contienen. Es decir, el trabajo de los espesadores es mantener en movimiento las pulpas de concentrado y relave, haciéndolos más densos y espesos por la eliminación de cierto porcentaje de agua. El agua clara rebalsa por la parte superior por canales. El espesador es un aparato que trabaja en forma continua, tiene un rastrillo que sirve para empujar lentamente, hacia el centro, las partículas sólidas que se van asentando en el fondo en forma de barro espeso, a fin de sacarlos por la descarga (cono). Al mismo tiempo, los rastrillos evitan que el lodo se endurezca demasiado en el fondo; y si no existieran estos no habría forma de sacarlos o descargarlos.</p>
+                            <h4>Flowsheet del Área de Espesamiento</h4>
+                            <img src="/assets/images/FlowEsp.png" class="img-responsive" alt=""/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-chat></app-chat>
+    </div>
+</body>
+</html>
+

@@ -1,1 +1,78 @@
-<p>chancado works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chancado</title>
+    <link rel="stylesheet" href="chancado.component.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">InfoPilot</a>
+        <nav class="navbar">
+            <a routerLink="/home">Home</a>
+            <a routerLink="/chancado">Chancado</a>
+            <a routerLink="/molienda">Molienda</a>
+            <a routerLink="/flotacion">Flotacion</a>
+            <a routerLink="/espesamiento">Espesamiento</a>
+            <a (click)="logOut()">LogOut</a>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <div class="row team_box">
+                    <h3 class="m_2">Área chancado</h3>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/ChaQuijada1.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Chancadora de Quijada</a></h4>
+                        <p class="m_6">Equipo de Área de Chancado</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/ZaVibratoria2.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Zaranda Vibratoria</a></h4>
+                        <p class="m_6">Equipo de Área de Chancado</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/ChaRrodillo3.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Chancadora de Rodillo</a></h4>
+                        <p class="m_6">Equipo de Área de Chancado</p>
+                    </div>
+                    <div class="col-md-3 team1">
+                        <a class="popup-with-zoom-anim" ><img src="/assets/images/FajTranspor4.jpg" class="img-responsive" title="continue" alt=""/></a>
+                        <h4 class="m_5"><a >Fajas Transportadoras</a></h4>
+                        <p class="m_6">Equipos de Área de Chancado</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 team_bottom">
+                        <ul class="team_list">
+                            <h4>Recomendaciones</h4>
+                            <li><a >Seguridad:</a><p>Para la planta piloto es necesario la seguridad por lo tanto se hará uso de los epps necesarios (casco, lentes de seguridad, mameluco, respirador anti polvo, tapones de oído, zapatos de seguridad). Tambien en la zaranda es necesario poner una guarda de protección para evitar posibles daños al operador y/o trabajadores.</p></li>
+                            <li><a >Puesta de Marcha:</a><p>Las secciones de alimentación al chancado secundario y la chancadora, funcionan mensualmente ya que los ingenieros que le dan uso como laboratorio de prácticas para la carrera de oppm. Las paradas son principalmente necesarias para mantenimiento o cuando la entrega de mineral  al proceso de chancado  se ve interrumpida por largos periodos.</p></li>
+                            <li><a >Chancadora de Rodillo:</a><p>El tamaño de la roca que puede triturarse depende del ángulo de sujeción y de la fricción entre la piedra y la superficie de los rodillos. el ángulo de sujeción se determina trazando líneas desde los centros de los rodillos a los puntos de contacto con la piedra, y dibujando tangentes a estas líneas. el ángulo con que se cortan las tangentes es el ángulo de sujeción.</p></li>
+                            <li><a >Chancadora de Quijada:</a><p>Es alimentada por una tolva de gruesos que tiene una capacidad de alimentación mínima de 20 kg/h y máxima de 60 kg/h la cual alimenta la chancadora que tiene una capacidad de 50 kg/h pero por problemas de capacidad de la zaranda como las fajas solo se alimentara con 20 kg/h. La cual tiene la función de triturar y llevar a una dimensión el mineral para ser transportado a la siguiente etapa.</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="team_list">
+                            <h4>Introducción</h4>
+                            <p class="m_7">Es la primera etapa para el beneficio de minerales; y consiste en la aplicación de fuerza mecánica para romper los trozos grandes de mineral hasta reducirlos a un tamaño menor (fragmentos ) utilizando fuerzas de comprensión y en menor proporción fuerzas de fricción, flexión, cizallamiento u otras se realiza en máquinas que se mueven a velocidad media o baja en una trayectoria fija y que ejercen presiones inmensas a bajas velocidades, que se caracterizan porque sus elementos trituradores no se tocan y las condiciones principales de esta operación son la oscilación y la velocidad de oscilación, y el factor que influye esta condición de operación son las características del mineral (humedad, tamaño y dureza).</p>
+                            <h4>Procedimiento de Operación</h4>
+                            <p class="m_7">Para el procedimiento de operación de chancado en la planta piloto de Tecsup, se deben seguir los siguientes pasos:</p>
+                            <p class="m_7">1. Arranque de fajas transportadoras n°01, n°02, n°03, n°04 y n°05.</p>
+                            <p class="m_7">2. Se procede con el arranque de la chancadora de rodillos.</p>
+                            <p class="m_7">3. Luego procedemos al arranque de la zaranda vibratoria.</p>
+                            <p class="m_7">4. Por ultimo procedemos el arranque de la chancadora quijada.</p>
+                            <h4>Flowsheet del Área de Chancado</h4>
+                            <img src="/assets/images/FlowChanc.jpg" class="img-responsive" alt=""/>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-chat></app-chat>
+    </div>
+</body>
+</html>
+
