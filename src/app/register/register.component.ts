@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
       "email": this.registerForm.value.email,
       "password": this.registerForm.value.password,
     };
-    this.http.post("http://ec2-18-191-147-77.us-east-2.compute.amazonaws.com:9992/user/create",bodyData).subscribe((resultData: any)=>{
+    this.http.post("http://ec2-3-145-51-160.us-east-2.compute.amazonaws.com:9992/user/create",bodyData).subscribe((resultData: any)=>{
         console.log(resultData);
         alert("User Registered Successfully")
     });
