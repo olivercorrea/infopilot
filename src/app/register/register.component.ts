@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
       "email": this.registerForm.value.email,
       "password": this.registerForm.value.password,
     };
-    this.http.post("http://localhost:8080/user/create",bodyData).subscribe((resultData: any)=>{
+    this.http.post("http://3.135.204.14:8080/user/create",bodyData).subscribe((resultData: any)=>{
         console.log(resultData);
         alert("User Registered Successfully")
     });
