@@ -30,7 +30,7 @@ export class LoginComponent {
       password: this.password,
     };
 
-    this.http.post("http://18.191.42.205:9992/user/login", bodyData).subscribe((resultData: any) => {
+    this.http.post("http://localhost:9992/user/login", bodyData).subscribe((resultData: any) => {
       console.log(resultData);
       if (resultData.status) {
         if (resultData.token) {
